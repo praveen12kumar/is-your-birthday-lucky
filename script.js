@@ -6,6 +6,10 @@ const outputDiv = document.querySelector(".output");
 checkButton.addEventListener("click", function checkBirthDateIsLucky(){
    const sum = calculateDate(dateofBirth.value);
 
+   if(luckyNumber < 0){
+    outputDiv.innerText = "Lucky number should not be negative"
+   }
+
    if(sum % luckyNumber.value !== 0){
     outputDiv.innerText = "NOOOO..!! Its not Lucky..!! Do try it in next Life.!! 😋😛";
    }
